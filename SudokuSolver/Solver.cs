@@ -83,31 +83,11 @@ namespace SudokuSolver
 
 		bool existInZone(Board b, int x, int y, int val)
 		{
-			int x1 = 6, y1 = 6, x2 = 8, y2 = 8;
+			int[] zonesLimits = new int[] { 0, 0, 0, 3, 3, 3, 6, 6, 6 };
 
-			if (x >= 0 && x <= 2)
+			for (int i = zonesLimits[x]; i < zonesLimits[x] + 3; i++)
 			{
-				x1 = 0;
-				x2 = 2;
-			} else if (x >= 3 && x <= 5)
-			{
-				x1 = 3;
-				x2 = 5;
-			}
-
-			if (y >= 0 && y <= 2)
-			{
-				y1 = 0;
-				y2 = 2;
-			} else if (y >= 3 && y <= 5)
-			{
-				y1 = 3;
-				y2 = 5;
-			}
-
-			for (int i = x1; i <= x2; i++)
-			{
-				for (int j = y1; j <= y2; j++)
+				for (int j = zonesLimits[y]; j < zonesLimits[y] + 3; j++)
 				{
 					if (b.get(i, j) == val)
 					{

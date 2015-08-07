@@ -57,6 +57,8 @@ namespace SudokuSolver
 
 			while (true)
 			{
+				Console.Clear();
+				b.render();
 				Console.WriteLine("Enter data in the format [x y value], or enter 0 to solve: ");
 				input = Console.ReadLine();
 
