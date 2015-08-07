@@ -1,4 +1,4 @@
-# Reinvent Wheels - SudokuSolver
+# Reinvent Wheels - Sudoku Solver
 
 This is a simple project that reinvents a little tool for solveing sudoku problems, it uses a brute force approach.
 
